@@ -25,6 +25,7 @@ namespace HotChocolate.Utilities.Introspection
         {
             DocumentNode document = CreateIntrospectionQueryDocument(features);
             string sourceText = document.Print(false);
+            sourceText=sourceText.Replace("onField onFragment onOperation", "");
             return new HttpQueryRequest(sourceText, "introspection_phase_2");
         }
 

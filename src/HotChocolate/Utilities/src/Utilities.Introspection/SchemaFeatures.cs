@@ -24,6 +24,7 @@ namespace HotChocolate.Utilities.Introspection
             IntrospectionResult result)
         {
             var features = new SchemaFeatures();
+            /*
             FullType directive = result.Data.Schema.Types.First(t =>
                  t.Name.Equals(__Directive, StringComparison.Ordinal));
             features.HasRepeatableDirectives = directive.Fields.Any(t =>
@@ -35,7 +36,7 @@ namespace HotChocolate.Utilities.Introspection
                  t.Name.Equals(__Schema, StringComparison.Ordinal));
             features.HasSubscriptionSupport = schema.Fields.Any(t =>
                 t.Name.Equals(SubscriptionType, StringComparison.Ordinal));
-
+            */
             return features;
         }
     }
